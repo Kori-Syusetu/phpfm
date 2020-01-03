@@ -3,7 +3,7 @@
 /*-------------------------------------------------
 | PHP FILE MANAGER
 +--------------------------------------------------
-| phpFileManager 1.7.9
+| phpFileManager 1.7.9-kori1
 | By Fabricio Seger Kolling
 | Copyright (c) 2004-2019 Fabrício Seger Kolling
 | E-mail: dulldusk@gmail.com
@@ -35,7 +35,7 @@
 // +--------------------------------------------------
 // | Config
 // +--------------------------------------------------
-$version = '1.7.9';
+$version = '1.7.9-kori1';
 $charset = 'UTF-8';
 $debug_mode = false;
 $max_php_recursion = 200;
@@ -2665,7 +2665,7 @@ function dir_list_form() {
         toogleModalWindow('".addslashes($fm_path_info['basename'])."?action=12','".et('Portscan')."');
     }
     function about_form(){
-        toogleModalWindow('//www.dulldusk.com/phpfm?version=".$version."','".et('About')." - ".et("FileMan")." - ".et('Version')." ".$version."');
+        toogleModalWindow('//istn.isnow.xyz/phpfm?version=".$version."','".et('About')." - ".et("FileMan")." - ".et('Version')." ".$version."');
     }
     function view_form(arg){
         toogleModalWindow('".addslashes($fm_path_info['basename'])."?action=4&fm_current_dir=".rawurlencode($fm_current_dir)."&filename='+encodeURIComponent(arg),'".et("View")." '+(arg));
@@ -4125,6 +4125,7 @@ function config_form(){
                 <option value='fr'>French - by Jean Bilwes</option>
                 <option value='de'>German - by Guido Ogrzal</option>
                 <option value='it'>Italian - by Valerio Capello</option>
+                <option value='ja'>Japanese - by Kori Syusetu</option>
                 <option value='ko'>Korean - by Airplanez</option>
                 <option value='fa'>Persian/Dari - by Opensecure, Max Base</option>
                 <option value='pt'>Portuguese - by Fabricio Seger Kolling</option>
@@ -8087,6 +8088,129 @@ function et($tag){
     $et['sr']['About'] = 'O meni';
     $et['sr']['FileSaved'] = 'Datoteka je sačuvana';
     $et['sr']['FileSaveError'] = 'Greška prilikom čuvanja datoteke';
+   
+    // Japanese Custom Lang Data by Kori_1085
+    $et['ja']['Version'] = 'バージョン';
+    $et['ja']['DocRoot'] = 'ドキュメント・ルート';
+    $et['ja']['FMRoot'] = 'ファイルマネージャ・ルート';
+    $et['ja']['DateFormat'] = '日付形式';
+    $et['ja']['GetSize'] = 'サイズを取得';
+    $et['ja']['Error'] = 'エラー';
+    $et['ja']['Name'] = '名前';
+    $et['ja']['And'] = 'と';
+    $et['ja']['Enter'] = 'エンター';
+    $et['ja']['Send'] = '送信';
+    $et['ja']['Refresh'] = '再読み込み';
+    $et['ja']['SaveConfig'] = '設定を保存';
+    //$et['ja']['SavePass'] = 'パスワードを保存';
+    //$et['ja']['TypePass'] = 'パスワードを入力してください';
+    $et['ja']['SaveFile'] = 'ファイルを保存';
+    $et['ja']['Save'] = '保存';
+    $et['ja']['Leave'] = '離れる';
+    $et['ja']['Edit'] = '編集';
+    $et['ja']['View'] = '確認';
+    $et['ja']['Config'] = '設定';
+    $et['ja']['Ren'] = '名前を変更';
+    $et['ja']['Rem'] = '削除';
+    $et['ja']['Compress'] = '圧縮';
+    $et['ja']['Decompress'] = '解凍';
+    $et['ja']['ResolveIDs'] = 'IDを解決';
+    $et['ja']['Move'] = '移動';
+    $et['ja']['Copy'] = 'コピー';
+    $et['ja']['ServerInfo'] = 'サーバー情報';
+    $et['ja']['CreateDir'] = 'フォルダを作成';
+    $et['ja']['CreateArq'] = 'ファイルを作成';
+    $et['ja']['Symlink'] = 'シンボリックリンク';
+    $et['ja']['HardLink'] = 'ハードリンク';
+    $et['ja']['ExecCmd'] = 'コマンドを実行';
+    $et['ja']['Upload'] = 'アップロード';
+    $et['ja']['UploadEnd'] = 'アップロードは終了しました';
+    $et['ja']['Perm'] = '権限';
+    $et['ja']['Perms'] = '権限';
+    $et['ja']['Owner'] = 'オーナー';
+    $et['ja']['Group'] = 'グループ';
+    $et['ja']['Other'] = 'その他';
+    $et['ja']['Size'] = 'サイズ';
+    $et['ja']['Date'] = '日付';
+    $et['ja']['Type'] = '種類';
+    $et['ja']['Free'] = '空き';
+    $et['ja']['Shell'] = 'シェル';
+    $et['ja']['Read'] = '読み込み';
+    $et['ja']['Write'] = '書き込み';
+    $et['ja']['Exec'] = '実行';
+    $et['ja']['Apply'] = '適用';
+    $et['ja']['StickyBit'] = 'スティッキービット';
+    $et['ja']['Pass'] = 'パスワード';
+    $et['ja']['Lang'] = '言語・Language';
+    $et['ja']['File'] = 'ファイル';
+    $et['ja']['File_s'] = 'ファイル';
+    $et['ja']['Dir_s'] = 'フォルダ';
+    $et['ja']['To'] = 'to';
+    $et['ja']['Destination'] = '宛先';
+    $et['ja']['Configurations'] = '設定';
+    $et['ja']['JSError'] = 'JavaScriptでエラー';
+    $et['ja']['NoSel'] = 'アイテムを選択後実行してください';
+    $et['ja']['SelDir'] = '宛先を左の階層ビューで選んでください';
+    $et['ja']['TypeDir'] = 'フォルダの名前を入力してください';
+    $et['ja']['TypeArq'] = 'ファイルの名前を入力してください';
+    $et['ja']['TypeCmd'] = 'コマンドを入力してください';
+    $et['ja']['TypeArqComp'] = 'ファイルの名前を入力してください。\\n拡張子は圧縮ファイルの種類になります\\n例:\\nnome.zip\\nnome.tar\\nnome.bzip\\nnome.gzip';
+    $et['ja']['RemSel'] = '選択したファイルを削除します';
+    $et['ja']['NoDestDir'] = '宛先のフォルダが指定されていません';
+    $et['ja']['DestEqOrig'] = '宛先は同じフォルダです';
+    $et['ja']['InvalidDest'] = '宛先のフォルダは無効です';
+    $et['ja']['NoNewPerm'] = '新しい権限は設定されていません';
+    $et['ja']['CopyTo'] = '選択したファイルもしくはフォルダを次の位置にコピーします：';
+    $et['ja']['MoveTo'] = '選択したファイルもしくはフォルダを次の位置に移動します：';
+    $et['ja']['AlterPermTo'] = '選択したファイルもしくはフォルダの権限を変更します：';
+    $et['ja']['ConfExec'] = '実行しますか？';
+    $et['ja']['ConfRem'] = '削除しますか？';
+    $et['ja']['EmptyDir'] = '空のフォルダ';
+    $et['ja']['IOError'] = '入出力でエラーが発生しました';
+    $et['ja']['FileMan'] = 'PHP ファイルマネージャ';
+    $et['ja']['InvPass'] = '無効なパスワード';
+    $et['ja']['ReadDenied'] = '読み取り権限がありません';
+    $et['ja']['FileNotFound'] = 'ファイルは存在しません';
+    $et['ja']['AutoClose'] = '完了後に閉じる';
+    $et['ja']['OutDocRoot'] = 'ファイルはドキュメント・ルートの外です';
+    $et['ja']['NoCmd'] = 'エラー：コマンドは存在しないか、認識されません';
+    $et['ja']['ConfTrySave'] = 'ファイルへの書き込みが権限により禁止されています。\\nもう一度お試しください';
+    $et['ja']['ConfSaved'] = '設定を保存しました';
+    $et['ja']['PassSaved'] = 'パスワードを保存しました';
+    $et['ja']['FileDirExists'] = 'ファイルまたはフォルダはすでに存在します';
+    $et['ja']['NoPhpinfo'] = '関数 phpinfo は無効です';
+    $et['ja']['NoReturn'] = '返りがありません';
+    $et['ja']['FileSent'] = 'ファイルを送信';
+    $et['ja']['SpaceLimReached'] = '制限容量に達しました';
+    $et['ja']['InvExt'] = '不明な拡張子';
+    $et['ja']['FileNoOverw'] = 'ファイルの上書きに失敗しました';
+    $et['ja']['FileOverw'] = 'ファイルを上書きしました';
+    $et['ja']['FileIgnored'] = 'ファイルを無視';
+    $et['ja']['ChkVer'] = '新しいバージョンを確認';
+    $et['ja']['ChkVerAvailable'] = '新しいバージョンがあります。ここをクリックしてダウンロードします';
+    $et['ja']['ChkVerNotAvailable'] = '新しいバージョンはありません。f(^_^；)';
+    $et['ja']['ChkVerError'] = '確認に失敗しました';
+    $et['ja']['Website'] = 'ウェブサイト';
+    $et['ja']['SendingForm'] = 'ファイルを送信中、しばらくお待ちください。';
+    $et['ja']['NoFileSel'] = 'ファイルを選択していません';
+    $et['ja']['SelAll'] = 'すべて選択';
+    $et['ja']['SelNone'] = '選択を解除';
+    $et['ja']['SelInverse'] = '選択範囲を反転';
+    $et['ja']['Selected_s'] = '選択済み';
+    $et['ja']['Total'] = '合計';
+    $et['ja']['Partition'] = 'パーティション';
+    $et['ja']['RenderTime'] = 'このページを描画する時間';
+    $et['ja']['Seconds'] = '秒';
+    $et['ja']['ErrorReport'] = 'エラーを報告';
+    $et['ja']['Close'] = '閉じる';
+    $et['ja']['SetPass'] = 'パスワードを設定';
+    $et['ja']['ChangePass'] = 'パスワードを変更';
+    $et['ja']['Portscan'] = 'ポートスキャン';
+    $et['ja']['PHPOpenBasedir'] = 'PHP Open 基準フォルダ';
+    $et['ja']['PHPOpenBasedirFullAccess'] = '(未設定) フルアクセス';
+    $et['ja']['About'] = 'これは？';
+    $et['ja']['FileSaved'] = 'ファイルを保存しました';
+    $et['ja']['FileSaveError'] = 'ファイルの保存に失敗しました';
 
     if (!strlen($lang)) $lang = $sys_lang;
     if (isset($et[$lang][$tag])) return html_encode($et[$lang][$tag]);
